@@ -93,7 +93,9 @@ section{margin-bottom:64px}
 
 .small{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .mini{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column}
-.mini h4{margin:0 0 6px;font-size:16px}
+.mini h3{margin:0 0 6px;font-size:17px;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.ai{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:14px;padding:24px 26px}
+.ai p{margin:0;max-width:72ch;font-size:16.5px}
 .mini p{margin:0 0 12px;color:var(--muted);font-size:14.5px;flex:1}
 .mini a{font-size:14px;font-weight:500;text-decoration:none;border-bottom:1.5px solid var(--accent);align-self:flex-start}
 
@@ -137,7 +139,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:28px 0 40px}
 <header class="hero">
   <img class="avatar" src="assets/avatar.jpg" alt="Grzegorz Hintz" width="168" height="168">
   <div>
-    <p class="eyebrow">Data Scientist</p>
+    <p class="eyebrow">Data Scientist · <span lang="pl">AI i agenci</span><span lang="en">AI &amp; agents</span></p>
     <h1>Grzegorz Hintz</h1>
     <p class="lead" lang="pl">Buduję modele, które nie kończą się w notebooku: od zebrania danych, przez rzetelną ewaluację, po działającą aplikację, z której ktoś korzysta.</p>
     <p class="lead" lang="en">I build models that don't stay in a notebook: from collecting the data, through honest evaluation, to a running application people actually use.</p>
@@ -156,7 +158,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:28px 0 40px}
 <div class="nums">
   <div class="num"><b>35%</b><span lang="pl">HitRate@10 mojego rekomendera vs 26% dla „najpopularniejszych”</span><span lang="en">HitRate@10 of my recommender vs 26% for a popularity baseline</span></div>
   <div class="num"><b>50 mln</b><span lang="pl">pasażerów rocznie: skala, na którą skalibrowałem model tłoku SKM</span><span lang="en">passengers a year: the scale my SKM crowding model is calibrated to</span></div>
-  <div class="num"><b>4</b><span lang="pl">aplikacje z danymi działające na moim własnym serwerze</span><span lang="en">data apps running on my own self-hosted server</span></div>
+  <div class="num"><b>3</b><span lang="pl">aplikacje z danymi działające produkcyjnie na moim własnym serwerze</span><span lang="en">data apps running in production on my own self-hosted server</span></div>
 </div>
 
 <section id="projekty">
@@ -231,30 +233,24 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:28px 0 40px}
       <li>Scheduler aware of trading days and holidays, installable on a phone</li>
     </ul>
     <ul class="stack"><li>Python</li><li>Web scraping</li><li>APScheduler</li><li>FastAPI</li><li>SQLite</li><li>Docker</li></ul>
-    <p class="note" lang="pl">Prywatne narzędzie, chętnie pokażę je na rozmowie.</p>
-    <p class="note" lang="en">A private tool, happy to demo it in an interview.</p>
+    <p class="note" lang="pl">Narzędzie prywatne: kod i demo nie są publiczne.</p>
+    <p class="note" lang="en">A private tool: code and demo are not public.</p>
   </article>
 
-  <h3 style="font:650 20px Newsreader,Georgia,serif;margin:36px 0 14px"><span lang="pl">Mniejsze projekty</span><span lang="en">Smaller projects</span></h3>
-  <div class="small">
-    <div class="mini">
-      <h4><span lang="pl">Porównywarka cen (PCP)</span><span lang="en">Price comparator (PCP)</span></h4>
-      <p lang="pl">Projekt zespołowy: scraping sklepów, historia cen na wykresach, powiadomienia o zmianach.</p>
-      <p lang="en">Team project: store scraping, price history charts, change notifications.</p>
-      <a href="https://github.com/ASTYU27/pcp" target="_blank" rel="noopener">GitHub →</a>
-    </div>
-    <div class="mini">
-      <h4><span lang="pl">Mój rozkład SKM</span><span lang="en">My SKM timetable</span></h4>
-      <p lang="pl">Lekka aplikacja PWA z najbliższymi odjazdami na moich trasach, działa offline.</p>
-      <p lang="en">A lightweight offline-first PWA showing the next departures on my routes.</p>
-      <a href="https://github.com/ASTYU27/SKM-CHYLONIA" target="_blank" rel="noopener">GitHub →</a>
-    </div>
-    <div class="mini">
-      <h4>TV Remote</h4>
-      <p lang="pl">Telefon jako pilot, myszka i klawiatura do PC podłączonego do TV, przez WebSocket.</p>
-      <p lang="en">Turns a phone into a remote, touchpad and keyboard for a TV-connected PC over WebSocket.</p>
-      <span class="note">aiohttp · WebSocket · Win32</span>
-    </div>
+  <div class="mini">
+    <h3><span lang="pl">Porównywarka cen (PCP)</span><span lang="en">Price comparator (PCP)</span> <span class="tag"><span lang="pl">projekt zespołowy</span><span lang="en">team project</span></span></h3>
+    <p lang="pl">Scraping sklepów internetowych, historia cen na wykresach, konta użytkowników i powiadomienia o zmianach cen.</p>
+    <p lang="en">Online store scraping, price history charts, user accounts and price-change notifications.</p>
+    <a href="https://github.com/ASTYU27/pcp" target="_blank" rel="noopener">GitHub →</a>
+  </div>
+</section>
+
+<section id="ai">
+  <h2><span lang="pl">AI i agenci</span><span lang="en">AI &amp; agents</span></h2>
+  <p class="sub"><span lang="pl">To, co mnie teraz najbardziej wciąga.</span><span lang="en">What excites me most right now.</span></p>
+  <div class="ai">
+    <p lang="pl">Interesuję się sztuczną inteligencją, a szczególnie <b>agentami AI</b>, czyli systemami opartymi na modelach językowych, które same planują kolejne kroki, korzystają z narzędzi i doprowadzają zadanie do końca. Testuję, jak je budować, i na co dzień pracuję z agentem kodującym. Ja odpowiadam za problem, dane, model i ocenę wyników, a agent przyspiesza implementację. Tak powstała większość projektów z tej strony.</p>
+    <p lang="en">I'm into artificial intelligence, especially <b>AI agents</b>: systems built on language models that plan their own steps, use tools and carry a task through to the end. I experiment with building them and work with a coding agent every day. I own the problem, the data, the model and the evaluation, and the agent speeds up the implementation. That's how most projects on this page were built.</p>
   </div>
 </section>
 
@@ -266,13 +262,15 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:28px 0 40px}
     <div class="skill"><h3><span lang="pl">Dane</span><span lang="en">Data</span></h3><p>Python, pandas, NumPy, scikit-learn, PySpark, SQL, web scraping, GTFS</p></div>
     <div class="skill"><h3><span lang="pl">Inżynieria</span><span lang="en">Engineering</span></h3><p>Airflow, FastAPI, Docker / Compose, PostgreSQL, SQLite, pytest, Git</p></div>
     <div class="skill"><h3><span lang="pl">Domeny</span><span lang="en">Domains</span></h3><p lang="pl">Rynek energii (TGE), transport publiczny, rekomendacje treści</p><p lang="en">Energy markets (TGE), public transport, content recommendations</p></div>
+    <div class="skill"><h3>AI</h3><p lang="pl">Modele językowe (LLM), agenci AI z narzędziami, praca z agentem kodującym</p><p lang="en">Large language models, tool-using AI agents, working with a coding agent</p></div>
+    <div class="skill"><h3><span lang="pl">Szkolenia</span><span lang="en">Training</span></h3><p lang="pl">Szkolenia Google oraz SGH Szkoły Głównej Handlowej</p><p lang="en">Training programmes by Google and SGH Warsaw School of Economics</p></div>
   </div>
 </section>
 
 <section class="contact">
-  <h2><span lang="pl">Porozmawiajmy</span><span lang="en">Let's talk</span></h2>
-  <p lang="pl">Szukasz kogoś, kto dowiezie model od danych do produkcji? Napisz.</p>
-  <p lang="en">Looking for someone who takes a model from data to production? Get in touch.</p>
+  <h2><span lang="pl">Kontakt</span><span lang="en">Contact</span></h2>
+  <p lang="pl">Chętnie porozmawiam o danych, modelach i AI.</p>
+  <p lang="en">Always happy to talk data, models and AI.</p>
   <div class="cta">
     <a class="btn" href="mailto:grzegorz.hintz27@gmail.com">grzegorz.hintz27@gmail.com</a>
     <a class="btn" href="https://www.linkedin.com/in/grzegorz-hintz-272727272727astyu" target="_blank" rel="noopener">LinkedIn</a>
