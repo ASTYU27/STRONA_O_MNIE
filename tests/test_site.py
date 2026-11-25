@@ -188,6 +188,12 @@ def test_luzny_ton_bez_kariery_i_bez_naciaganego_tytulu(page, lang):
         assert career not in text, f"Wątek kariery wrócił: {career}"
 
 
+def test_kolejnosc_projektow():
+    html = INDEX.read_text(encoding="utf-8")
+    pos = [html.index(f'id="{k}"') for k in ("film", "skm", "tge", "pcp")]
+    assert pos == sorted(pos)
+
+
 # --- sieć ------------------------------------------------------------------
 
 def _status(url: str) -> int:

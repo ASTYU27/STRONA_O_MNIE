@@ -155,33 +155,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:28px 0 40px}
 
 <section id="projekty">
   <h2><span lang="pl">Projekty</span><span lang="en">Projects</span></h2>
-  <p class="sub"><span lang="pl">Każdy zaczął się od pytania, na które sam chciałem znać odpowiedź. Trzy pierwsze można otworzyć i sprawdzić.</span><span lang="en">Each one started with a question I wanted answered. The first three are live, so you can try them.</span></p>
-
-  <article class="proj" id="skm">
-    <div class="proj-head">
-      <h3>Znowu SKM</h3>
-      <span class="tag"><span lang="pl">model popytu · działa</span><span lang="en">demand model · live</span></span>
-    </div>
-    <p class="question"><span lang="pl">„Usiądę dziś w SKM-ce?”</span><span lang="en">“Will I get a seat on the train today?”</span></p>
-    <p lang="pl">Codziennie jeżdżę SKM-ką z Chylonii na Przymorze i rano zwykle stoję. Danych o tym, jak zapełnione są pociągi, nikt nie publikuje, więc zrobiłem własny model. Bazuje na danych UTK o liczbie pasażerów na stacjach, a wyniki porównałem z pomiarami z Gdańskich Badań Ruchu. Model daje 0,8–1,0 wartości z pomiarów, więc jest całkiem blisko.</p>
-    <p lang="en">I take the SKM train from Chylonia to Przymorze every day, and in the morning I usually end up standing. Nobody publishes how full the trains are, so I built my own model. It's based on UTK passenger counts per station, and I checked the output against Gdańsk traffic survey counts. It came out at 0.8–1.0 of the measured values, which is pretty close.</p>
-    <ul class="stack"><li>Python</li><li>NumPy</li><li>GTFS-RT</li><li>FastAPI</li><li>SQLite</li></ul>
-    <div class="links"><a href="https://znowuskm.tail37d1bd.ts.net" target="_blank" rel="noopener"><span lang="pl">Zobacz →</span><span lang="en">Take a look →</span></a></div>
-    <p class="note"><span lang="pl">Stoi na moim komputerze w domu, więc czasem jest offline.</span><span lang="en">It runs on my PC at home, so now and then it's offline.</span></p>
-  </article>
-
-  <article class="proj" id="tge">
-    <div class="proj-head">
-      <h3>TGE Monitor</h3>
-      <span class="tag"><span lang="pl">rynek energii · demo</span><span lang="en">energy market · demo</span></span>
-    </div>
-    <p class="question"><span lang="pl">„Kiedy cena energii dojdzie do mojego poziomu?”</span><span lang="en">“When will the power price reach my level?”</span></p>
-    <p lang="pl">Po każdej sesji na Towarowej Giełdzie Energii aplikacja pobiera ceny rozliczeniowe kontraktów na prąd i porównuje je z moimi poziomami. Jak cena dojdzie do któregoś, dostaję maila. Wie, kiedy giełda jest zamknięta, i zapisuje historię notowań.</p>
-    <p lang="en">After each session on the Polish Power Exchange (TGE), the app pulls settlement prices for power contracts and checks them against my levels. If one gets hit, I get an e-mail. It knows when the exchange is closed and keeps a history of quotes.</p>
-    <ul class="stack"><li>Python</li><li>scraping</li><li>APScheduler</li><li>FastAPI</li><li>Docker</li></ul>
-    <div class="links"><a href="https://znowuskm.tail37d1bd.ts.net:10000/" target="_blank" rel="noopener"><span lang="pl">Otwórz demo →</span><span lang="en">Open the demo →</span></a></div>
-    <p class="note"><span lang="pl">Hasło: <b>demo</b>. Prawdziwe notowania, przykładowe zlecenia, maile wyłączone.</span><span lang="en">Password: <b>demo</b>. Real quotes, sample orders, e-mails off.</span></p>
-  </article>
+  <p class="sub"><span lang="pl">Każdy zaczął się od pytania, na które sam chciałem znać odpowiedź. Trzy pierwsze możesz otworzyć i sprawdzić.</span><span lang="en">Each one started with a question I wanted answered. The first three are live, so you can try them.</span></p>
 
   <article class="proj" id="film">
     <div class="proj-head">
@@ -189,8 +163,8 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:28px 0 40px}
       <span class="tag"><span lang="pl">projekt dyplomowy SGH · działa</span><span lang="en">SGH capstone · live</span></span>
     </div>
     <p class="question"><span lang="pl">„Co by tu dziś obejrzeć?”</span><span lang="en">“What should I watch tonight?”</span></p>
-    <p lang="pl">System rekomendacji filmów, który łączy oceny innych widzów (ALS w Sparku) z podobieństwem samych filmów. Sprawdziłem go na danych MovieLens: w 35% przypadków film, który ktoś później obejrzał, był w jego pierwszej dziesiątce propozycji. Dla porównania „najpopularniejsze” dają 26%, a losowanie 6%.</p>
-    <p lang="en">A movie recommender that mixes other viewers' ratings (ALS in Spark) with how similar the films themselves are. I tested it on MovieLens data: 35% of the time, a film someone watched later was in their top ten. For comparison, “most popular” gets 26% and random picks get 6%.</p>
+    <p lang="pl">Zbudowałem system rekomendacji filmów, który łączy oceny innych widzów (ALS w Sparku) z podobieństwem samych filmów. Sprawdziłem go na danych MovieLens: w 35% przypadków film, który ktoś później obejrzał, był w jego pierwszej dziesiątce propozycji. Dla porównania „najpopularniejsze” dają 26%, a losowanie 6%.</p>
+    <p lang="en">I built a movie recommender that mixes other viewers' ratings (ALS in Spark) with how similar the films themselves are. I tested it on MovieLens data: 35% of the time, a film someone watched later was in their top ten. For comparison, “most popular” gets 26% and random picks get 6%.</p>
     <div class="result">
       <div class="win"><b>35%</b><span lang="pl">mój model</span><span lang="en">my model</span></div>
       <div><b>26%</b><span lang="pl">najpopularniejsze</span><span lang="en">most popular</span></div>
@@ -200,14 +174,40 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:28px 0 40px}
     <div class="links"><a href="https://film-recommender.pl" target="_blank" rel="noopener"><span lang="pl">Poszukaj filmu →</span><span lang="en">Find a film →</span></a></div>
   </article>
 
+  <article class="proj" id="skm">
+    <div class="proj-head">
+      <h3>Znowu SKM</h3>
+      <span class="tag"><span lang="pl">model popytu · działa</span><span lang="en">demand model · live</span></span>
+    </div>
+    <p class="question"><span lang="pl">„Usiądę dziś w SKM-ce?”</span><span lang="en">“Will I get a seat on the train today?”</span></p>
+    <p lang="pl">Codziennie jeżdżę SKM-ką z Chylonii na Przymorze i rano zwykle stoję. Danych o tym, jak zapełnione są pociągi, nikt nie publikuje, więc zrobiłem własny model. Oparłem go na danych UTK o liczbie pasażerów na stacjach, a wyniki porównałem z pomiarami z Gdańskich Badań Ruchu. Wychodzi mi 0,8–1,0 wartości z pomiarów, więc jest całkiem blisko.</p>
+    <p lang="en">I take the SKM train from Chylonia to Przymorze every day, and in the morning I usually end up standing. Nobody publishes how full the trains are, so I built my own model. I based it on UTK passenger counts per station, and I checked the output against Gdańsk traffic survey counts. I get 0.8–1.0 of the measured values, which is pretty close.</p>
+    <ul class="stack"><li>Python</li><li>NumPy</li><li>GTFS-RT</li><li>FastAPI</li><li>SQLite</li></ul>
+    <div class="links"><a href="https://znowuskm.tail37d1bd.ts.net" target="_blank" rel="noopener"><span lang="pl">Zobacz →</span><span lang="en">Take a look →</span></a></div>
+    <p class="note"><span lang="pl">Trzymam go na swoim komputerze w domu, więc czasem jest offline.</span><span lang="en">I host it on my PC at home, so now and then it's offline.</span></p>
+  </article>
+
+  <article class="proj" id="tge">
+    <div class="proj-head">
+      <h3>TGE Monitor</h3>
+      <span class="tag"><span lang="pl">rynek energii · demo</span><span lang="en">energy market · demo</span></span>
+    </div>
+    <p class="question"><span lang="pl">„Kiedy cena energii dojdzie do mojego poziomu?”</span><span lang="en">“When will the power price reach my level?”</span></p>
+    <p lang="pl">Napisałem aplikację, która po każdej sesji na Towarowej Giełdzie Energii pobiera ceny rozliczeniowe kontraktów na prąd i porównuje je z moimi poziomami. Jak cena dojdzie do któregoś, dostaję maila. Nauczyłem ją rozpoznawać dni bez sesji, a historię notowań zapisuję w bazie.</p>
+    <p lang="en">I wrote an app that, after each session on the Polish Power Exchange (TGE), pulls settlement prices for power contracts and checks them against my levels. If one gets hit, I get an e-mail. I taught it to skip days with no trading, and I keep the price history in a database.</p>
+    <ul class="stack"><li>Python</li><li>scraping</li><li>APScheduler</li><li>FastAPI</li><li>Docker</li></ul>
+    <div class="links"><a href="https://znowuskm.tail37d1bd.ts.net:10000/" target="_blank" rel="noopener"><span lang="pl">Otwórz demo →</span><span lang="en">Open the demo →</span></a></div>
+    <p class="note"><span lang="pl">Hasło: <b>demo</b>. Wrzuciłem tam prawdziwe notowania i przykładowe zlecenia, a maile wyłączyłem.</span><span lang="en">Password: <b>demo</b>. I loaded it with real quotes and sample orders, and switched e-mails off.</span></p>
+  </article>
+
   <article class="proj small" id="pcp">
     <div class="proj-head">
       <h3><span lang="pl">PCP – porównywarka cen</span><span lang="en">PCP – price comparator</span></h3>
       <span class="tag"><span lang="pl">projekt zespołowy</span><span lang="en">team project</span></span>
     </div>
     <p class="question"><span lang="pl">„Gdzie jest taniej?”</span><span lang="en">“Where is it cheaper?”</span></p>
-    <p lang="pl">Projekt z dwoma kolegami ze studiów. Zbieraliśmy ceny ze sklepów internetowych i pokazywaliśmy, jak się zmieniały.</p>
-    <p lang="en">Built with two classmates at university. We collected prices from online stores and showed how they changed over time.</p>
+    <p lang="pl">Zrobiłem go z dwoma kolegami ze studiów. Zbieraliśmy ceny ze sklepów internetowych i pokazywaliśmy, jak się zmieniały.</p>
+    <p lang="en">I built it with two classmates at university. We collected prices from online stores and showed how they changed over time.</p>
     <div class="links"><a href="https://github.com/ASTYU27/pcp" target="_blank" rel="noopener">GitHub →</a></div>
   </article>
 </section>
