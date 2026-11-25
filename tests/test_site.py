@@ -159,6 +159,11 @@ def test_ton_wizytowki_a_nie_szukania_pracy(page, lang, phrases):
         assert p.lower() not in text, f"Fraza w stylu szukania pracy: {p!r}"
 
 
+def test_tge_ma_link_do_demo_i_haslo(page):
+    assert any(l.startswith("https://znowuskm.tail37d1bd.ts.net:10000") for l in page.links)
+    assert "demo" in visible_text(page, "pl").lower()
+
+
 @pytest.mark.parametrize("lang", ["pl", "en"])
 def test_jest_ai_agenci_i_szkolenia(page, lang):
     text = visible_text(page, lang)
