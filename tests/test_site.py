@@ -32,6 +32,7 @@ class Page(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
         self.links: list[str] = []
+        self.ids: set[str] = set()
         self.assets: list[str] = []
         self.meta: dict[str, str] = {}
         self.lang_children: dict[int, dict[str, int]] = {}  # id rodzica -> {pl: n, en: n}
@@ -49,6 +50,8 @@ class Page(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
+        if a.get("id"):
+            self.ids.add(a["id"])
         if tag == "a" and a.get("href"):
             self.links.append(a["href"])
             if a.get("target") == "_blank" and "noopener" not in (a.get("rel") or ""):
@@ -150,8 +153,8 @@ def test_usuniete_projekty_zniknely(page, lang):
 
 
 @pytest.mark.parametrize("lang,phrases", [
-    ("pl", ["Szukasz kogoś", "na rozmowie", "rekrut"]),
-    ("en", ["Looking for someone", "interview", "hire me", "recruit"]),
+    ("pl", ["Szukasz kogoś", "na rozmowie", "zatrudnij", "szukam pracy"]),
+    ("en", ["Looking for someone", "interview", "hire me", "open to work"]),
 ])
 def test_ton_wizytowki_a_nie_szukania_pracy(page, lang, phrases):
     text = visible_text(page, lang).lower()
@@ -169,6 +172,29 @@ def test_jest_ai_agenci_i_szkolenia(page, lang):
     text = visible_text(page, lang)
     for needle in ("agent", "AI", "Google", "SGH"):
         assert needle in text, f"Brak '{needle}' w wersji {lang}"
+
+
+def test_kotwice_prowadza_do_istniejacych_sekcji(page):
+    anchors = [l[1:] for l in page.links if l.startswith("#")]
+    assert len(anchors) >= 4
+    for a in anchors:
+        assert a in page.ids, f"Brak sekcji #{a}"
+
+
+@pytest.mark.parametrize("lang", ["pl", "en"])
+def test_uczciwy_tytul_i_sciezka(page, lang):
+    text = visible_text(page, lang)
+    # oficjalne stanowisko, nie "Data Scientist w Enerdze"
+    assert ("Wydział Polityki Cenowej" in text) or ("Pricing Policy Department" in text)
+    assert "Data Scientist" not in text
+    for needle in ("Sii", "Uniwersytet Gdański" if lang == "pl" else "University of Gdańsk",
+                   "Microsoft", "Big Data"):
+        assert needle in text, f"Brak '{needle}' w wersji {lang}"
+
+
+def test_sgh_ukonczone_z_projektem_filmowym(page):
+    text = visible_text(page, "pl")
+    assert "ukończone" in text and "Projekt dyplomowy: Film Recommender" in text
 
 
 # --- sieć ------------------------------------------------------------------

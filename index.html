@@ -3,23 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Grzegorz Hintz · Data Scientist</title>
-<meta name="description" content="Grzegorz Hintz – Data Scientist (Energa Obrót, SGH). Systemy rekomendacyjne, modele popytu, dane rynku energii. Projekty end-to-end: od danych do działającej aplikacji.">
+<title>Grzegorz Hintz · popyt, ceny i dane</title>
+<meta name="description" content="Grzegorz Hintz – system pricingowy w Energa Obrót, data science i inżynieria danych (SGH). Buduje działające aplikacje: model zapełnienia SKM, monitor cen energii z TGE, hybrydowy system rekomendacji filmów.">
 <meta property="og:type" content="profile">
-<meta property="og:title" content="Grzegorz Hintz · Data Scientist">
-<meta property="og:description" content="Modele, które działają w produkcji: rekomendacje filmów, prognoza tłoku w SKM, monitoring cen energii.">
+<meta property="og:title" content="Grzegorz Hintz – pytania ekonomisty, warsztat data scientista">
+<meta property="og:description" content="Czy usiądę w porannym SKM? Kiedy kontrakt na energię dojdzie do mojej ceny? Co obejrzeć wieczorem? Cztery pytania, cztery działające aplikacje.">
 <meta property="og:url" content="https://astyu27.github.io/STRONA_O_MNIE/">
 <meta property="og:image" content="https://astyu27.github.io/STRONA_O_MNIE/assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/avatar.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,650&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,650;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#f6f4ef; --surface:#ffffff; --ink:#17181c; --muted:#5d606b; --line:#e3dfd6;
   --accent:#d6402b; --accent-soft:#fbe7e3; --chip:#efece5;
   --shadow:0 1px 2px rgba(20,20,30,.04),0 8px 24px rgba(20,20,30,.06);
+  --serif:Newsreader,Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
@@ -33,95 +34,110 @@
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans)}
 a{color:inherit}
 .wrap{max-width:960px;margin:0 auto;padding:0 20px}
 html[data-lang="pl"] [lang="en"], html[data-lang="en"] [lang="pl"]{display:none !important}
+[id]{scroll-margin-top:72px}
 
 /* top bar */
 .bar{display:flex;justify-content:flex-end;align-items:center;gap:8px;padding:12px 0;position:sticky;top:0;z-index:10;background:var(--bg)}
 .seg{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px}
-.seg button{font:500 14px "IBM Plex Sans",sans-serif;color:var(--muted);background:none;border:0;border-radius:999px;padding:7px 14px;cursor:pointer;transition:background .15s,color .15s}
+.seg button{font:500 14px var(--sans);color:var(--muted);background:none;border:0;border-radius:999px;padding:7px 14px;cursor:pointer;transition:background .15s,color .15s}
 .seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 .seg button:not([aria-pressed="true"]):hover{color:var(--ink)}
-.toggle{height:38px;width:38px;padding:0}
-.toggle{font:500 13px "IBM Plex Sans",sans-serif;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
+.toggle{font:500 14px var(--sans);background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;height:38px;width:38px;cursor:pointer}
 .toggle:hover{border-color:var(--ink)}
 
 /* hero */
-.hero{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;padding:28px 0 48px}
-.avatar{width:168px;height:168px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 6px var(--surface),0 0 0 7px var(--line)}
-.eyebrow{font:500 13px "JetBrains Mono",monospace;letter-spacing:.04em;color:var(--accent);text-transform:uppercase;margin:0 0 6px}
-h1{font:650 clamp(40px,7vw,64px)/1.02 Newsreader,Georgia,serif;letter-spacing:-.02em;margin:0 0 14px}
-.lead{font-size:clamp(17px,2.2vw,20px);color:var(--ink);max-width:58ch;margin:0 0 10px}
-.meta{color:var(--muted);margin:0 0 22px;font-size:15px}
+.hero{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:start;padding:28px 0 64px}
+.avatar{width:168px;height:168px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 6px var(--surface),0 0 0 7px var(--line);margin-top:8px}
+.eyebrow{font:500 13px var(--mono);letter-spacing:.06em;color:var(--accent);text-transform:uppercase;margin:0 0 6px}
+h1{font:650 clamp(42px,7vw,64px)/1.02 var(--serif);letter-spacing:-.02em;margin:0 0 8px}
+.tagline{font:italic 500 clamp(21px,3vw,27px)/1.25 var(--serif);margin:0 0 18px;color:var(--ink)}
+.lead{font-size:clamp(16.5px,2vw,18px);max-width:60ch;margin:0 0 12px}
+.meta{color:var(--muted);margin:0 0 22px;font-size:14.5px}
 .cta{display:flex;flex-wrap:wrap;gap:10px}
 .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:500;font-size:15px;border-radius:999px;padding:10px 18px;border:1px solid var(--line);background:var(--surface)}
 .btn:hover{border-color:var(--ink)}
 .btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .btn svg{width:17px;height:17px;flex:none}
-
-/* numbers */
-.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:64px}
-.num{background:var(--surface);padding:20px 22px}
-.num b{display:block;font:650 34px/1.1 Newsreader,Georgia,serif;letter-spacing:-.01em}
-.num span{color:var(--muted);font-size:14px}
+.qchips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none}
+.qchips a{display:inline-block;text-decoration:none;font:italic 500 16px/1.2 var(--serif);padding:8px 14px;border-radius:999px;background:var(--accent-soft);color:var(--ink);border:1px solid transparent}
+.qchips a:hover{border-color:var(--accent)}
 
 /* sections */
-h2{font:650 28px/1.2 Newsreader,Georgia,serif;margin:0 0 6px;letter-spacing:-.01em}
-.sub{color:var(--muted);margin:0 0 24px}
-section{margin-bottom:64px}
+section{margin-bottom:72px}
+h2{font:650 30px/1.15 var(--serif);margin:0 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 26px;max-width:62ch}
 
+/* project cards */
 .proj{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px;margin-bottom:18px;box-shadow:var(--shadow)}
-.proj-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:10px}
-.proj h3{font:650 23px/1.2 Newsreader,Georgia,serif;margin:0}
-.tag{font:500 12px "JetBrains Mono",monospace;color:var(--accent);background:var(--accent-soft);padding:4px 9px;border-radius:6px;white-space:nowrap}
-.proj p{margin:0 0 12px;max-width:72ch}
-.proj ul{margin:0 0 16px;padding-left:18px;max-width:72ch}
+.proj-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.proj h3{font:600 14px var(--mono);letter-spacing:.02em;margin:0;color:var(--muted)}
+.tag{font:500 12px var(--mono);color:var(--accent);background:var(--accent-soft);padding:4px 9px;border-radius:6px;white-space:nowrap}
+.question{font:italic 500 clamp(23px,3.2vw,30px)/1.2 var(--serif);margin:0 0 16px;letter-spacing:-.005em}
+.proj p{margin:0 0 14px;max-width:70ch}
+.proj ul{margin:0 0 16px;padding-left:18px;max-width:70ch}
 .proj li{margin-bottom:4px}
 .proj li::marker{color:var(--accent)}
-.result{display:flex;flex-wrap:wrap;gap:22px;padding:14px 16px;background:var(--chip);border-radius:12px;margin:0 0 16px}
+.result{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px 26px;padding:14px 16px;background:var(--chip);border-radius:12px;margin:0 0 16px}
 .result div{font-size:13px;color:var(--muted)}
-.result b{display:block;font:650 22px/1.2 Newsreader,Georgia,serif;color:var(--ink)}
+.result b{display:block;font:650 26px/1.15 var(--serif);color:var(--ink)}
 .result .win b{color:var(--accent)}
-.stack{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px;padding:0;list-style:none}
-.stack li{font:500 12.5px "JetBrains Mono",monospace;background:var(--chip);padding:4px 9px;border-radius:6px}
-.links{display:flex;flex-wrap:wrap;gap:16px;font-weight:500;font-size:15px}
+.result .cap{flex-basis:100%;font-size:12.5px}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px !important;padding:0 !important;list-style:none}
+.stack li{font:500 12.5px var(--mono);background:var(--chip);padding:4px 9px;border-radius:6px;margin:0}
+.links{display:flex;flex-wrap:wrap;gap:16px;font-weight:500;font-size:15px;margin-bottom:6px}
 .links a{text-decoration:none;border-bottom:1.5px solid var(--accent)}
 .links a:hover{color:var(--accent)}
-.note{color:var(--muted);font-size:14px}
+.note{color:var(--muted);font-size:13.5px;margin:6px 0 0 !important}
+.proj.small{padding:22px 24px}
+.proj.small .question{font-size:21px;margin-bottom:10px}
 
-.small{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.mini{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column}
-.mini h3{margin:0 0 6px;font-size:17px;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
-.ai{background:var(--accent-soft);border:1px solid var(--line);border-radius:14px;padding:24px 26px}
-.ai p{margin:0;max-width:72ch;font-size:16.5px}
-.mini p{margin:0 0 12px;color:var(--muted);font-size:14.5px;flex:1}
-.mini a{font-size:14px;font-weight:500;text-decoration:none;border-bottom:1.5px solid var(--accent);align-self:flex-start}
+/* timeline */
+.timeline{list-style:none;margin:0;padding:0;position:relative}
+.timeline::before{content:"";position:absolute;left:118px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.timeline li{display:grid;grid-template-columns:100px 1fr;gap:36px;padding:0 0 26px;position:relative}
+.timeline li::before{content:"";position:absolute;left:113px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--muted)}
+.timeline li.now::before{background:var(--accent);border-color:var(--accent)}
+.when{font:500 13px/1.6 var(--mono);color:var(--muted);text-align:right;padding-top:1px}
+.timeline h3{font:600 17px/1.35 var(--sans);margin:0 0 2px}
+.timeline p{margin:0;color:var(--muted);max-width:62ch}
 
-.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.skill{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
-.skill h3{margin:0 0 10px;font:500 12px "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.05em;color:var(--accent)}
-.skill p{margin:0;font-size:15px}
+/* how I work */
+.how{background:var(--accent-soft);border-radius:16px;padding:26px 28px;margin-bottom:24px}
+.how p{margin:0;font:500 clamp(18px,2.3vw,21px)/1.45 var(--serif);max-width:62ch}
+.cols{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.box h3{margin:0 0 14px;font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+.tools{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:15px}
+.tools dt{color:var(--muted);font-size:14px}
+.tools dd{margin:0}
+.certs{list-style:none;margin:0;padding:0}
+.certs li{padding:10px 0;border-top:1px solid var(--line);font-size:15px;line-height:1.4}
+.certs li:first-child{border-top:0;padding-top:0}
+.certs small{display:block;color:var(--muted);font-size:13px;margin-top:2px}
 
-.contact{background:var(--ink);color:var(--bg);border-radius:22px;padding:40px;text-align:center}
+/* contact */
+.contact{background:var(--ink);color:var(--bg);border-radius:22px;padding:42px;text-align:center}
 .contact h2{color:var(--bg)}
-.contact p{opacity:.75;margin:0 0 22px}
+.contact p{opacity:.78;margin:0 auto 22px;max-width:46ch}
 .contact .btn{background:var(--bg);color:var(--ink);border-color:var(--bg)}
 .contact .cta{justify-content:center}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:28px 0 40px}
 
 @media (max-width:720px){
-  .hero{grid-template-columns:1fr;gap:22px;padding-top:8px}
-  .avatar{width:120px;height:120px}
-  .nums{grid-template-columns:1fr}
-  .small,.skills{grid-template-columns:1fr}
+  .hero{grid-template-columns:1fr;gap:20px;padding:8px 0 52px}
+  .avatar{width:116px;height:116px;margin-top:0}
   .proj{padding:22px 18px}
-  .contact{padding:30px 20px}
-}
-@media (prefers-reduced-motion:no-preference){
-  .proj,.mini{transition:transform .2s ease, border-color .2s ease}
-  .proj:hover,.mini:hover{border-color:var(--muted)}
+  .cols{grid-template-columns:1fr}
+  .timeline::before{left:5px}
+  .timeline li{grid-template-columns:1fr;gap:2px;padding-left:28px}
+  .timeline li::before{left:0}
+  .when{text-align:left}
+  .contact{padding:32px 20px}
+  .how{padding:22px 20px}
 }
 </style>
 </head>
@@ -139,11 +155,12 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:28px 0 40px}
 <header class="hero">
   <img class="avatar" src="assets/avatar.jpg" alt="Grzegorz Hintz" width="168" height="168">
   <div>
-    <p class="eyebrow">Data Scientist · <span lang="pl">AI i agenci</span><span lang="en">AI &amp; agents</span></p>
+    <p class="eyebrow"><span lang="pl">Popyt · ceny · dane</span><span lang="en">Demand · prices · data</span></p>
     <h1>Grzegorz Hintz</h1>
-    <p class="lead" lang="pl">Buduję modele, które nie kończą się w notebooku: od zebrania danych, przez rzetelną ewaluację, po działającą aplikację, z której ktoś korzysta.</p>
-    <p class="lead" lang="en">I build models that don't stay in a notebook: from collecting the data, through honest evaluation, to a running application people actually use.</p>
-    <p class="meta"><span lang="pl">Energa Obrót · SGH Szkoła Główna Handlowa · Gdańsk i okolice</span><span lang="en">Energa Obrót · SGH Warsaw School of Economics · Gdańsk, Poland</span></p>
+    <p class="tagline"><span lang="pl">Pytania ekonomisty, warsztat data scientista.</span><span lang="en">An economist's questions, a data scientist's toolkit.</span></p>
+    <p class="lead" lang="pl">Zawodowo pracuję nad systemem pricingowym w Energa Obrót. Po godzinach buduję aplikacje, które odpowiadają na konkretne pytania: czy usiądę w porannym SKM, kiedy kontrakt na energię dojdzie do mojej ceny, co obejrzeć wieczorem. Każda z nich działa i każdą można kliknąć.</p>
+    <p class="lead" lang="en">By day I work on a pricing system at Energa Obrót, a Polish energy supplier. After hours I build apps that answer concrete questions: will I get a seat on the morning train, when will a power contract hit my price, what should I watch tonight. Every one of them runs, and you can try each one.</p>
+    <p class="meta"><span lang="pl">Specjalista, Wydział Polityki Cenowej · Energa Obrót · SGH Data Engineering – Big Data · Gdańsk</span><span lang="en">Specialist, Pricing Policy Department · Energa Obrót · SGH Data Engineering – Big Data · Gdańsk, Poland</span></p>
     <div class="cta">
       <a class="btn primary" href="https://www.linkedin.com/in/grzegorz-hintz-272727272727astyu" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
@@ -152,144 +169,211 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:28px 0 40px}
       <a class="btn" href="mailto:grzegorz.hintz27@gmail.com">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>E-mail</a>
     </div>
+    <ul class="qchips">
+      <li><a href="#skm"><span lang="pl">Czy usiądę w SKM?</span><span lang="en">Will I get a seat?</span></a></li>
+      <li><a href="#tge"><span lang="pl">Kiedy cena dojdzie?</span><span lang="en">When will the price hit?</span></a></li>
+      <li><a href="#film"><span lang="pl">Co obejrzeć?</span><span lang="en">What to watch?</span></a></li>
+      <li><a href="#pcp"><span lang="pl">Gdzie taniej?</span><span lang="en">Where is it cheaper?</span></a></li>
+    </ul>
   </div>
 </header>
 
-<div class="nums">
-  <div class="num"><b>35%</b><span lang="pl">HitRate@10 mojego rekomendera vs 26% dla „najpopularniejszych”</span><span lang="en">HitRate@10 of my recommender vs 26% for a popularity baseline</span></div>
-  <div class="num"><b>50 mln</b><span lang="pl">pasażerów rocznie: skala, na którą skalibrowałem model tłoku SKM</span><span lang="en">passengers a year: the scale my SKM crowding model is calibrated to</span></div>
-  <div class="num"><b>3</b><span lang="pl">aplikacje z danymi działające produkcyjnie na moim własnym serwerze</span><span lang="en">data apps running in production on my own self-hosted server</span></div>
-</div>
-
 <section id="projekty">
-  <h2><span lang="pl">Projekty</span><span lang="en">Projects</span></h2>
-  <p class="sub"><span lang="pl">Każdy działa poza notebookiem: ma dane, model, ewaluację i interfejs.</span><span lang="en">Each one lives outside a notebook: data, model, evaluation and an interface.</span></p>
+  <h2><span lang="pl">Cztery pytania</span><span lang="en">Four questions</span></h2>
+  <p class="sub"><span lang="pl">Każdy projekt zaczął się od pytania, na które nie było gotowej odpowiedzi. Każdy działa na moim własnym serwerze.</span><span lang="en">Each project started with a question nobody had answered yet. Each one runs on my own home server.</span></p>
 
-  <!-- Film Recommender -->
-  <article class="proj">
-    <div class="proj-head">
-      <h3>Film Recommender</h3>
-      <span class="tag"><span lang="pl">praca dyplomowa · live</span><span lang="en">thesis · live</span></span>
-    </div>
-    <p lang="pl">Hybrydowy system rekomendacji filmów: filtrowanie kolaboracyjne (ALS w Sparku) połączone z podobieństwem treści. Wagi hybrydy dobrane na rzetelnej ewaluacji z podziałem czasowym na MovieLens, a nie „na oko”.</p>
-    <p lang="en">A hybrid movie recommender: collaborative filtering (Spark ALS) blended with content similarity. Blend weights chosen with a time-based split evaluation on MovieLens, not by eye.</p>
-    <div class="result">
-      <div class="win"><b>35%</b>HitRate@10 · <span lang="pl">hybryda</span><span lang="en">hybrid</span></div>
-      <div><b>26%</b><span lang="pl">popularność</span><span lang="en">popularity</span></div>
-      <div><b>6%</b><span lang="pl">losowo</span><span lang="en">random</span></div>
-    </div>
-    <ul lang="pl">
-      <li>Pipeline w Airflow: pobieranie danych, trening i cotygodniowa ewaluacja jako osobne DAG-i</li>
-      <li>Wyjaśnialne rekomendacje („Bo podobał Ci się X”), backend FastAPI, całość w Docker Compose</li>
-      <li>Produkcja na własnym serwerze: Cloudflare Tunnel, kopie zapasowe, healthcheck z alertami, RODO</li>
-    </ul>
-    <ul lang="en">
-      <li>Airflow pipeline: data fetch, training and weekly evaluation as separate DAGs</li>
-      <li>Explainable recommendations ("Because you liked X"), FastAPI backend, all in Docker Compose</li>
-      <li>Self-hosted in production: Cloudflare Tunnel, backups, health checks with alerts, GDPR</li>
-    </ul>
-    <ul class="stack"><li>PySpark ALS</li><li>Airflow</li><li>FastAPI</li><li>PostgreSQL</li><li>Docker</li><li>MovieLens</li></ul>
-    <div class="links"><a href="https://film-recommender.pl" target="_blank" rel="noopener"><span lang="pl">Zobacz na żywo →</span><span lang="en">See it live →</span></a></div>
-  </article>
-
-  <!-- Znowu SKM -->
-  <article class="proj">
+  <article class="proj" id="skm">
     <div class="proj-head">
       <h3>Znowu SKM</h3>
-      <span class="tag"><span lang="pl">model popytu · live</span><span lang="en">demand model · live</span></span>
+      <span class="tag"><span lang="pl">model popytu · działa</span><span lang="en">demand model · live</span></span>
     </div>
-    <p lang="pl">Czy usiądę w SKM i do którego wagonu wsiąść? Nikt nie publikuje danych o zapełnieniu pociągów, więc zbudowałem model popytu od zera, z danych publicznych, i walidowałem go z niezależnymi pomiarami.</p>
-    <p lang="en">Will I get a seat on the Tricity commuter train, and which car should I board? Nobody publishes occupancy data, so I built a demand model from scratch on public data and validated it against independent counts.</p>
+    <p class="question"><span lang="pl">„Czy usiądę w SKM i do którego wagonu wsiąść?”</span><span lang="en">“Will I get a seat on the train, and which car should I board?”</span></p>
+    <p lang="pl">Codziennie jeżdżę SKM z Gdyni Chylonii na gdańskie Przymorze. Nikt nie publikuje, jak bardzo zapełnione są pociągi, więc policzyłem to sam. Zbudowałem od zera model popytu: kto, skąd, dokąd i o której jedzie. Skalibrowałem go na oficjalnych danych UTK za 2025 rok (50,36 mln pasażerów rocznie) i sprawdziłem z niezależnymi pomiarami z Gdańskich Badań Ruchu.</p>
+    <p lang="en">I commute daily on the Tricity rail line (SKM), from Gdynia Chylonia to Gdańsk Przymorze. Nobody publishes how full the trains are, so I worked it out myself. I built a demand model from scratch (who travels, from where, to where and when), calibrated it to official 2025 rail-office data (50.36 million passengers a year) and checked it against independent Gdańsk traffic counts.</p>
+    <div class="result">
+      <div class="win"><b>0,8–1,0</b><span lang="pl">stosunek model : pomiar na kluczowych odcinkach</span><span lang="en">model-to-measured ratio on key segments</span></div>
+    </div>
     <ul lang="pl">
-      <li>Macierz podróży OD: model grawitacyjny + IPF, skalibrowany na danych UTK 2025 (50,4 mln pasażerów/rok)</li>
-      <li>Walidacja z Gdańskimi Badaniami Ruchu: stosunek model/pomiar 0,8–1,0 na kluczowych odcinkach</li>
-      <li>Rozkład szansy na miejsce (log-normalny), opóźnienia na żywo z GTFS-RT, pogoda, kalendarz, uczenie ze zgłoszeń pasażerów</li>
+      <li>Macierz podróży OD z modelu grawitacyjnego i IPF</li>
+      <li>Szansa na miejsce jako rozkład log-normalny, a nie proste „tak/nie”</li>
+      <li>Na żywo: opóźnienia z GTFS-RT, pogoda (Open-Meteo), kalendarz</li>
+      <li>Uczy się ze zgłoszeń pasażerów, instaluje się na telefonie (PWA)</li>
     </ul>
     <ul lang="en">
-      <li>Origin–destination matrix: gravity model + IPF, calibrated to Polish rail office (UTK) 2025 data – 50.4M passengers/yr</li>
-      <li>Validated against Gdańsk traffic survey counts: model/measured ratio 0.8–1.0 on key segments</li>
-      <li>Log-normal seat-chance distribution, live delays from GTFS-RT, weather and calendar effects, learns from rider reports</li>
+      <li>Origin–destination matrix from a gravity model and IPF</li>
+      <li>Seat chance as a log-normal distribution, not a plain yes/no</li>
+      <li>Live inputs: GTFS-RT delays, weather (Open-Meteo), calendar effects</li>
+      <li>Learns from rider reports; installs on a phone as a PWA</li>
     </ul>
-    <ul class="stack"><li>Python</li><li>NumPy</li><li>GTFS / GTFS-RT</li><li>FastAPI</li><li>SQLite</li><li>PWA</li></ul>
-    <div class="links"><a href="https://znowuskm.tail37d1bd.ts.net" target="_blank" rel="noopener"><span lang="pl">Demo na żywo →</span><span lang="en">Live demo →</span></a></div>
-    <p class="note" lang="pl">Demo działa na moim domowym serwerze, więc czasem może być niedostępne.</p>
-    <p class="note" lang="en">The demo runs on my home server, so it may occasionally be offline.</p>
+    <ul class="stack"><li>Python</li><li>NumPy</li><li>GTFS-RT</li><li>FastAPI</li><li>SQLite</li><li>PWA</li></ul>
+    <div class="links"><a href="https://znowuskm.tail37d1bd.ts.net" target="_blank" rel="noopener"><span lang="pl">Sprawdź, czy usiądziesz →</span><span lang="en">Check if you'll get a seat →</span></a></div>
+    <p class="note"><span lang="pl">Działa na moim domowym komputerze, więc czasem bywa offline.</span><span lang="en">Runs on my home PC, so it's occasionally offline.</span></p>
   </article>
 
-  <!-- TGE Monitor -->
-  <article class="proj">
+  <article class="proj" id="tge">
     <div class="proj-head">
       <h3>TGE Monitor</h3>
-      <span class="tag"><span lang="pl">rynek energii</span><span lang="en">energy market</span></span>
+      <span class="tag"><span lang="pl">rynek energii · demo</span><span lang="en">energy market · demo</span></span>
     </div>
-    <p lang="pl">Narzędzie do śledzenia kontraktów terminowych na energię elektryczną z Towarowej Giełdy Energii. Codziennie pobiera dzienne kursy rozliczeniowe (DKR), porównuje je z poziomami zleceń i wysyła alert e-mail, gdy cena „dojdzie”.</p>
-    <p lang="en">A tracker for electricity futures on the Polish Power Exchange (TGE). It scrapes daily settlement prices every session, compares them with order levels and sends an e-mail alert when the price is hit.</p>
+    <p class="question"><span lang="pl">„Kiedy kontrakt na energię dojdzie do mojej ceny?”</span><span lang="en">“When will a power contract hit my price?”</span></p>
+    <p lang="pl">Po każdej sesji Towarowej Giełdy Energii aplikacja pobiera dzienne kursy rozliczeniowe (DKR) kontraktów terminowych na energię elektryczną, porównuje je z poziomami zleceń i wysyła e-mail, gdy cena „dojdzie”. Wie, kiedy giełda nie pracuje, i prowadzi archiwum notowań. To projekt prywatny, napędzany tą samą ciekawością cen, która zaprowadziła mnie do pricingu.</p>
+    <p lang="en">After every session on the Polish Power Exchange (TGE), the app collects daily settlement prices for electricity futures, compares them with order levels and sends an e-mail when a price is hit. It knows when the exchange is closed and keeps a full archive of quotes. It's a personal project, driven by the same curiosity about prices that led me into pricing.</p>
+    <div class="result">
+      <div class="win"><b><span lang="pl">po każdej sesji</span><span lang="en">after every session</span></b><span lang="pl">automatycznie, bez ręcznego sprawdzania</span><span lang="en">automatically, no manual checking</span></div>
+    </div>
     <ul lang="pl">
-      <li>Scraping notowań, pełne archiwum sesji z eksportem CSV i wykresami historii</li>
-      <li>Harmonogram z uwzględnieniem dni sesyjnych i świąt, aplikacja instalowalna na telefonie</li>
+      <li>Scraping notowań, archiwum sesji z eksportem do CSV</li>
+      <li>Harmonogram uwzględniający dni sesyjne i święta</li>
+      <li>Alerty e-mail, aplikacja instalowana na telefonie</li>
     </ul>
     <ul lang="en">
-      <li>Quote scraping, full session archive with CSV export and history charts</li>
-      <li>Scheduler aware of trading days and holidays, installable on a phone</li>
+      <li>Quote scraping, session archive with CSV export</li>
+      <li>Scheduler aware of trading days and public holidays</li>
+      <li>E-mail alerts; installs on a phone</li>
     </ul>
-    <ul class="stack"><li>Python</li><li>Web scraping</li><li>APScheduler</li><li>FastAPI</li><li>SQLite</li><li>Docker</li></ul>
-    <div class="links"><a href="https://znowuskm.tail37d1bd.ts.net:10000/" target="_blank" rel="noopener"><span lang="pl">Demo na żywo →</span><span lang="en">Live demo →</span></a></div>
-    <p class="note" lang="pl">Hasło do demo: <b>demo</b>. Wersja demonstracyjna z prawdziwymi notowaniami TGE i przykładowymi zleceniami, bez powiadomień e-mail.</p>
-    <p class="note" lang="en">Demo password: <b>demo</b>. A demo instance with real TGE quotes and sample orders, e-mail alerts disabled.</p>
+    <ul class="stack"><li>Python</li><li>scraping</li><li>APScheduler</li><li>FastAPI</li><li>SQLite</li><li>Docker</li></ul>
+    <div class="links"><a href="https://znowuskm.tail37d1bd.ts.net:10000/" target="_blank" rel="noopener"><span lang="pl">Otwórz demo →</span><span lang="en">Open the demo →</span></a></div>
+    <p class="note"><span lang="pl">Hasło: <b>demo</b>. Prawdziwe notowania TGE, przykładowe zlecenia, bez wysyłki maili.</span><span lang="en">Password: <b>demo</b>. Real TGE quotes, sample orders, e-mails switched off.</span></p>
   </article>
 
-  <div class="mini">
-    <h3><span lang="pl">Porównywarka cen (PCP)</span><span lang="en">Price comparator (PCP)</span> <span class="tag"><span lang="pl">projekt zespołowy</span><span lang="en">team project</span></span></h3>
-    <p lang="pl">Scraping sklepów internetowych, historia cen na wykresach, konta użytkowników i powiadomienia o zmianach cen.</p>
-    <p lang="en">Online store scraping, price history charts, user accounts and price-change notifications.</p>
-    <a href="https://github.com/ASTYU27/pcp" target="_blank" rel="noopener">GitHub →</a>
-  </div>
+  <article class="proj" id="film">
+    <div class="proj-head">
+      <h3>Film Recommender</h3>
+      <span class="tag"><span lang="pl">projekt dyplomowy SGH · działa</span><span lang="en">SGH capstone · live</span></span>
+    </div>
+    <p class="question"><span lang="pl">„Co obejrzeć, skoro podobał mi się ten film?”</span><span lang="en">“What should I watch next, given what I liked?”</span></p>
+    <p lang="pl">Hybrydowy system rekomendacji: filtrowanie kolaboracyjne (ALS w PySpark) połączone z podobieństwem treści. Proporcji 0,6 / 0,4 nie wziąłem z głowy. Dobrałem ją na danych MovieLens (547 widzów, 2512 filmów) z podziałem czasowym, czyli model przewiduje przyszłe seanse, a nie odgaduje przeszłe. Każda propozycja ma uzasadnienie: „Bo podobał Ci się X”.</p>
+    <p lang="en">A hybrid recommender: collaborative filtering (PySpark ALS) blended with content similarity. The 0.6 / 0.4 blend isn't a guess. I tuned it on MovieLens data (547 viewers, 2,512 films) with a time-based split, so the model predicts future viewing instead of re-guessing the past. Every suggestion explains itself: “Because you liked X”.</p>
+    <div class="result">
+      <div class="win"><b>35%</b><span lang="pl">hybryda</span><span lang="en">hybrid</span></div>
+      <div><b>26%</b><span lang="pl">najpopularniejsze</span><span lang="en">most popular</span></div>
+      <div><b>6%</b><span lang="pl">losowo</span><span lang="en">random</span></div>
+      <div class="cap"><span lang="pl">HitRate@10: u ilu widzów przynajmniej jeden film, który faktycznie obejrzeli później, był w pierwszej dziesiątce propozycji.</span><span lang="en">HitRate@10: share of viewers for whom at least one film they actually watched later was in their top-ten suggestions.</span></div>
+    </div>
+    <ul lang="pl">
+      <li>Airflow: osobne DAG-i do pobierania danych, treningu i cotygodniowej ewaluacji</li>
+      <li>FastAPI, PostgreSQL, całość w Docker Compose</li>
+      <li>Pełny produkt: ok. 4200 stron pod SEO, konta z resetem hasła, kopie zapasowe, monitoring z alertami, RODO</li>
+    </ul>
+    <ul lang="en">
+      <li>Airflow: separate DAGs for data ingestion, training and weekly evaluation</li>
+      <li>FastAPI, PostgreSQL, everything in Docker Compose</li>
+      <li>A full product: ~4,200 SEO pages, accounts with password reset, backups, health checks with alerts, GDPR</li>
+    </ul>
+    <ul class="stack"><li>PySpark ALS</li><li>Airflow</li><li>FastAPI</li><li>PostgreSQL</li><li>Docker</li></ul>
+    <div class="links"><a href="https://film-recommender.pl" target="_blank" rel="noopener"><span lang="pl">Znajdź film →</span><span lang="en">Find a film →</span></a></div>
+  </article>
+
+  <article class="proj small" id="pcp">
+    <div class="proj-head">
+      <h3><span lang="pl">PCP – Porównywarka Cen Produktów</span><span lang="en">PCP – Product Price Comparator</span></h3>
+      <span class="tag"><span lang="pl">projekt zespołowy · studia</span><span lang="en">team project · university</span></span>
+    </div>
+    <p class="question"><span lang="pl">„Gdzie jest taniej i czy ta cena naprawdę spadła?”</span><span lang="en">“Where is it cheaper, and did the price really drop?”</span></p>
+    <p lang="pl">Projekt trzyosobowego zespołu na studiach: scraping sklepów internetowych, historia cen, konta użytkowników i powiadomienia o zmianach.</p>
+    <p lang="en">A three-person university project: online store scraping, price history, user accounts and price-change alerts.</p>
+    <div class="links"><a href="https://github.com/ASTYU27/pcp" target="_blank" rel="noopener">GitHub →</a></div>
+  </article>
 </section>
 
-<section id="ai">
-  <h2><span lang="pl">AI i agenci</span><span lang="en">AI &amp; agents</span></h2>
-  <p class="sub"><span lang="pl">To, co mnie teraz najbardziej wciąga.</span><span lang="en">What excites me most right now.</span></p>
-  <div class="ai">
-    <p lang="pl">Interesuję się sztuczną inteligencją, a szczególnie <b>agentami AI</b>, czyli systemami opartymi na modelach językowych, które same planują kolejne kroki, korzystają z narzędzi i doprowadzają zadanie do końca. Testuję, jak je budować, i na co dzień pracuję z agentem kodującym. Ja odpowiadam za problem, dane, model i ocenę wyników, a agent przyspiesza implementację. Tak powstała większość projektów z tej strony.</p>
-    <p lang="en">I'm into artificial intelligence, especially <b>AI agents</b>: systems built on language models that plan their own steps, use tools and carry a task through to the end. I experiment with building them and work with a coding agent every day. I own the problem, the data, the model and the evaluation, and the agent speeds up the implementation. That's how most projects on this page were built.</p>
-  </div>
+<section id="sciezka">
+  <h2><span lang="pl">Ścieżka</span><span lang="en">The path</span></h2>
+  <p class="sub"><span lang="pl">Ekonomia nauczyła mnie pytać o popyt i cenę. Ekonometria – jak to policzyć. Trzy lata w Sii – że za każdą liczbą stoją ludzie i terminy. SGH – jak robić to na dużą skalę.</span><span lang="en">Economics taught me to ask about demand and price. Econometrics taught me how to measure them. Three years at Sii taught me that every number has people and deadlines behind it. SGH taught me how to do it at scale.</span></p>
+  <ol class="timeline">
+    <li class="now">
+      <div class="when"><span lang="pl">2025 – dziś</span><span lang="en">2025 – now</span></div>
+      <div>
+        <h3>Energa Obrót</h3>
+        <p lang="pl">Specjalista w Wydziale Polityki Cenowej. Pracuję nad systemem pricingowym: ceny energii od strony spółki obrotu.</p>
+        <p lang="en">Specialist, Pricing Policy Department. I work on a pricing system: energy prices, seen from the supplier's side.</p>
+      </div>
+    </li>
+    <li>
+      <div class="when">2025 – 2026</div>
+      <div>
+        <h3><span lang="pl">SGH Szkoła Główna Handlowa</span><span lang="en">SGH Warsaw School of Economics</span></h3>
+        <p lang="pl">Studia podyplomowe Data Engineering – Big Data, ukończone. Projekt dyplomowy: Film Recommender.</p>
+        <p lang="en">Postgraduate studies in Data Engineering – Big Data, completed. Capstone project: Film Recommender.</p>
+      </div>
+    </li>
+    <li>
+      <div class="when">2021 – 2025</div>
+      <div>
+        <h3>Sii Poland</h3>
+        <p lang="pl">Najpierw staż w rekrutacji (Embedded Competency Center), potem trzy lata jako Sales and Delivery Operations Specialist. Kontakt z kandydatami i pracownikami, wsparcie procesów rekrutacji, praca z ludźmi na co dzień.</p>
+        <p lang="en">Started as a recruitment intern (Embedded Competency Center), then three years as a Sales and Delivery Operations Specialist: working with candidates and employees, supporting recruitment processes, dealing with people every day.</p>
+      </div>
+    </li>
+    <li>
+      <div class="when">2022 – 2024</div>
+      <div>
+        <h3><span lang="pl">Uniwersytet Gdański</span><span lang="en">University of Gdańsk</span></h3>
+        <p lang="pl">Magister, Informatyka i Ekonometria, równolegle z pracą w Sii.</p>
+        <p lang="en">MSc in Computer Science and Econometrics, alongside my job at Sii.</p>
+      </div>
+    </li>
+    <li>
+      <div class="when">2019 – 2022</div>
+      <div>
+        <h3><span lang="pl">Uniwersytet Gdański</span><span lang="en">University of Gdańsk</span></h3>
+        <p lang="pl">Licencjat z ekonomii. Po drodze Studencki Klub Biznesu (2020–2021) i AIESEC Polska (2021).</p>
+        <p lang="en">BA in Economics. Along the way: Student Business Club (2020–2021) and AIESEC Poland (2021).</p>
+      </div>
+    </li>
+  </ol>
 </section>
 
-<section id="umiejetnosci">
-  <h2><span lang="pl">Czym pracuję</span><span lang="en">What I work with</span></h2>
-  <p class="sub"><span lang="pl">Od surowych danych do wdrożenia.</span><span lang="en">From raw data to deployment.</span></p>
-  <div class="skills">
-    <div class="skill"><h3><span lang="pl">Modelowanie</span><span lang="en">Modelling</span></h3><p lang="pl">Systemy rekomendacyjne (ALS, hybrydy), modele popytu, statystyka, ewaluacja offline (HitRate, podział czasowy, baseline'y)</p><p lang="en">Recommender systems (ALS, hybrids), demand models, statistics, offline evaluation (HitRate, time splits, baselines)</p></div>
-    <div class="skill"><h3><span lang="pl">Dane</span><span lang="en">Data</span></h3><p>Python, pandas, NumPy, scikit-learn, PySpark, SQL, web scraping, GTFS</p></div>
-    <div class="skill"><h3><span lang="pl">Inżynieria</span><span lang="en">Engineering</span></h3><p>Airflow, FastAPI, Docker / Compose, PostgreSQL, SQLite, pytest, Git</p></div>
-    <div class="skill"><h3><span lang="pl">Domeny</span><span lang="en">Domains</span></h3><p lang="pl">Rynek energii (TGE), transport publiczny, rekomendacje treści</p><p lang="en">Energy markets (TGE), public transport, content recommendations</p></div>
-    <div class="skill"><h3>AI</h3><p lang="pl">Modele językowe (LLM), agenci AI z narzędziami, praca z agentem kodującym</p><p lang="en">Large language models, tool-using AI agents, working with a coding agent</p></div>
-    <div class="skill"><h3><span lang="pl">Szkolenia</span><span lang="en">Training</span></h3><p lang="pl">Szkolenia Google oraz SGH Szkoły Głównej Handlowej</p><p lang="en">Training programmes by Google and SGH Warsaw School of Economics</p></div>
+<section id="jak-pracuje">
+  <h2><span lang="pl">Jak pracuję</span><span lang="en">How I work</span></h2>
+  <div class="how">
+    <p lang="pl">Pytanie, dane, model i ocena wyniku są po mojej stronie. Agent AI do kodowania odpowiada za tempo. Tak powstała większość projektów z tej strony i właśnie dlatego jedna osoba może po godzinach zbudować działający model popytu dla całej linii kolejowej. Agentów AI nie tylko używam, ale też uczę się je budować.</p>
+    <p lang="en">I own the question, the data, the model and the evaluation. An AI coding agent owns the speed. That's how most projects on this page were built, and it's why one person can put together a working demand model for an entire rail line in their spare time. I don't just use AI agents; I'm learning to build them.</p>
+  </div>
+  <div class="cols">
+    <div class="box">
+      <h3><span lang="pl">Narzędzia</span><span lang="en">Toolkit</span></h3>
+      <dl class="tools">
+        <dt><span lang="pl">Analiza</span><span lang="en">Analysis</span></dt><dd><span lang="pl">Python · SQL · R · Excel i Power Query · Power BI</span><span lang="en">Python · SQL · R · Excel &amp; Power Query · Power BI</span></dd>
+        <dt><span lang="pl">Dane</span><span lang="en">Data</span></dt><dd>PySpark · Airflow · FastAPI · PostgreSQL · SQLite</dd>
+        <dt><span lang="pl">Wdrożenia</span><span lang="en">Deployment</span></dt><dd><span lang="pl">Linux · Docker · Git/GitHub · domowy serwer z Cloudflare Tunnel i Tailscale</span><span lang="en">Linux · Docker · Git/GitHub · home server with Cloudflare Tunnel and Tailscale</span></dd>
+        <dt><span lang="pl">Zespół</span><span lang="en">Teamwork</span></dt><dd><span lang="pl">JIRA · Scrum · angielski</span><span lang="en">JIRA · Scrum · English</span></dd>
+      </dl>
+    </div>
+    <div class="box">
+      <h3><span lang="pl">Certyfikaty</span><span lang="en">Certifications</span></h3>
+      <ul class="certs">
+        <li>Microsoft Applied Skills: Enhance agents with autonomous capabilities<small>Microsoft · 2026</small></li>
+        <li><span lang="pl">Umiejętności Jutra AI 3.0</span><span lang="en">“Skills of Tomorrow” AI 3.0</span><small>Google · 2026</small></li>
+        <li><span lang="pl">MS Excel: makra, Power Query, Power BI</span><span lang="en">MS Excel: macros, Power Query, Power BI</span><small>iNauka.pl · 2022</small></li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <section class="contact">
-  <h2><span lang="pl">Kontakt</span><span lang="en">Contact</span></h2>
-  <p lang="pl">Chętnie porozmawiam o danych, modelach i AI.</p>
-  <p lang="en">Always happy to talk data, models and AI.</p>
+  <h2><span lang="pl">Kontakt</span><span lang="en">Get in touch</span></h2>
+  <p lang="pl">Jeśli któreś z tych pytań Cię zaciekawiło – albo masz lepsze – napisz.</p>
+  <p lang="en">If one of these questions caught your eye, or you've got a better one, drop me a line.</p>
   <div class="cta">
     <a class="btn" href="mailto:grzegorz.hintz27@gmail.com">grzegorz.hintz27@gmail.com</a>
     <a class="btn" href="https://www.linkedin.com/in/grzegorz-hintz-272727272727astyu" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/ASTYU27" target="_blank" rel="noopener">GitHub</a>
   </div>
 </section>
 
-<footer>© 2026 Grzegorz Hintz</footer>
+<footer><span lang="pl">© 2026 Grzegorz Hintz · Gdańsk. Projekty z tej strony działają na moim własnym sprzęcie.</span><span lang="en">© 2026 Grzegorz Hintz · Gdańsk. The projects on this page run on my own hardware.</span></footer>
 </div>
 
 <script>
 (function(){
   var root=document.documentElement, tb=document.getElementById('themeBtn'),
       segs=document.querySelectorAll('[data-set-lang]');
+  var titles={pl:'Grzegorz Hintz · popyt, ceny i dane',en:'Grzegorz Hintz · demand, prices and data'};
   function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
   function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
   var q=new URLSearchParams(location.search).get('lang');
-  var lang=q||get('lang')||((navigator.language||'pl').toLowerCase().indexOf('pl')===0?'pl':'en');
-  function applyLang(l){root.dataset.lang=l;root.lang=l;
+  var lang=(q==='pl'||q==='en')?q:(get('lang')||((navigator.language||'pl').toLowerCase().indexOf('pl')===0?'pl':'en'));
+  function applyLang(l){root.dataset.lang=l;root.lang=l;document.title=titles[l];
     segs.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.setLang===l?'true':'false')});}
   applyLang(lang);
   segs.forEach(function(b){b.onclick=function(){lang=b.dataset.setLang;applyLang(lang);set('lang',lang)}});
