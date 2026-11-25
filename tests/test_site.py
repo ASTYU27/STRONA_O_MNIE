@@ -175,26 +175,17 @@ def test_jest_ai_agenci_i_szkolenia(page, lang):
 
 
 def test_kotwice_prowadza_do_istniejacych_sekcji(page):
-    anchors = [l[1:] for l in page.links if l.startswith("#")]
-    assert len(anchors) >= 4
-    for a in anchors:
+    for a in (l[1:] for l in page.links if l.startswith("#")):
         assert a in page.ids, f"Brak sekcji #{a}"
 
 
 @pytest.mark.parametrize("lang", ["pl", "en"])
-def test_uczciwy_tytul_i_sciezka(page, lang):
+def test_luzny_ton_bez_kariery_i_bez_naciaganego_tytulu(page, lang):
     text = visible_text(page, lang)
-    # oficjalne stanowisko, nie "Data Scientist w Enerdze"
-    assert ("Wydział Polityki Cenowej" in text) or ("Pricing Policy Department" in text)
+    assert "data science" in text.lower()
     assert "Data Scientist" not in text
-    for needle in ("Sii", "Uniwersytet Gdański" if lang == "pl" else "University of Gdańsk",
-                   "Microsoft", "Big Data"):
-        assert needle in text, f"Brak '{needle}' w wersji {lang}"
-
-
-def test_sgh_ukonczone_z_projektem_filmowym(page):
-    text = visible_text(page, "pl")
-    assert "ukończone" in text and "Projekt dyplomowy: Film Recommender" in text
+    for career in ("Sii", "Wydział Polityki Cenowej", "Pricing Policy", "Uniwersytet Gdański", "University of Gdańsk"):
+        assert career not in text, f"Wątek kariery wrócił: {career}"
 
 
 # --- sieć ------------------------------------------------------------------

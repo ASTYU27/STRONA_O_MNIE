@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Grzegorz Hintz · popyt, ceny i dane</title>
-<meta name="description" content="Grzegorz Hintz – system pricingowy w Energa Obrót, data science i inżynieria danych (SGH). Buduje działające aplikacje: model zapełnienia SKM, monitor cen energii z TGE, hybrydowy system rekomendacji filmów.">
+<title>Grzegorz Hintz · data science</title>
+<meta name="description" content="Grzegorz Hintz – data science. Moje projekty: model zapełnienia SKM, monitor cen energii z TGE i system rekomendacji filmów. Do tego technologie, których używam.">
 <meta property="og:type" content="profile">
-<meta property="og:title" content="Grzegorz Hintz – pytania ekonomisty, warsztat data scientista">
-<meta property="og:description" content="Czy usiądę w porannym SKM? Kiedy kontrakt na energię dojdzie do mojej ceny? Co obejrzeć wieczorem? Cztery pytania, cztery działające aplikacje.">
+<meta property="og:title" content="Grzegorz Hintz · data science">
+<meta property="og:description" content="Lubię szukać w danych związków, których na pierwszy rzut oka nie widać. Kilka moich projektów i narzędzia, z których korzystam.">
 <meta property="og:url" content="https://astyu27.github.io/STRONA_O_MNIE/">
 <meta property="og:image" content="https://astyu27.github.io/STRONA_O_MNIE/assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -62,9 +62,6 @@ h1{font:650 clamp(42px,7vw,64px)/1.02 var(--serif);letter-spacing:-.02em;margin:
 .btn:hover{border-color:var(--ink)}
 .btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .btn svg{width:17px;height:17px;flex:none}
-.qchips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none}
-.qchips a{display:inline-block;text-decoration:none;font:italic 500 16px/1.2 var(--serif);padding:8px 14px;border-radius:999px;background:var(--accent-soft);color:var(--ink);border:1px solid transparent}
-.qchips a:hover{border-color:var(--accent)}
 
 /* sections */
 section{margin-bottom:72px}
@@ -95,25 +92,14 @@ h2{font:650 30px/1.15 var(--serif);margin:0 0 8px;letter-spacing:-.01em}
 .proj.small{padding:22px 24px}
 .proj.small .question{font-size:21px;margin-bottom:10px}
 
-/* timeline */
-.timeline{list-style:none;margin:0;padding:0;position:relative}
-.timeline::before{content:"";position:absolute;left:118px;top:8px;bottom:8px;width:2px;background:var(--line)}
-.timeline li{display:grid;grid-template-columns:100px 1fr;gap:36px;padding:0 0 26px;position:relative}
-.timeline li::before{content:"";position:absolute;left:113px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--muted)}
-.timeline li.now::before{background:var(--accent);border-color:var(--accent)}
-.when{font:500 13px/1.6 var(--mono);color:var(--muted);text-align:right;padding-top:1px}
-.timeline h3{font:600 17px/1.35 var(--sans);margin:0 0 2px}
-.timeline p{margin:0;color:var(--muted);max-width:62ch}
-
-/* how I work */
-.how{background:var(--accent-soft);border-radius:16px;padding:26px 28px;margin-bottom:24px}
-.how p{margin:0;font:500 clamp(18px,2.3vw,21px)/1.45 var(--serif);max-width:62ch}
+/* tools */
 .cols{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
 .box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
 .box h3{margin:0 0 14px;font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
 .tools{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:15px}
 .tools dt{color:var(--muted);font-size:14px}
 .tools dd{margin:0}
+.boxp{margin:0 0 14px;font-size:15px}
 .certs{list-style:none;margin:0;padding:0}
 .certs li{padding:10px 0;border-top:1px solid var(--line);font-size:15px;line-height:1.4}
 .certs li:first-child{border-top:0;padding-top:0}
@@ -132,12 +118,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:28px 0 40px}
   .avatar{width:116px;height:116px;margin-top:0}
   .proj{padding:22px 18px}
   .cols{grid-template-columns:1fr}
-  .timeline::before{left:5px}
-  .timeline li{grid-template-columns:1fr;gap:2px;padding-left:28px}
-  .timeline li::before{left:0}
-  .when{text-align:left}
   .contact{padding:32px 20px}
-  .how{padding:22px 20px}
 }
 </style>
 </head>
@@ -155,12 +136,12 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:28px 0 40px}
 <header class="hero">
   <img class="avatar" src="assets/avatar.jpg" alt="Grzegorz Hintz" width="168" height="168">
   <div>
-    <p class="eyebrow"><span lang="pl">Popyt · ceny · dane</span><span lang="en">Demand · prices · data</span></p>
+    <p class="eyebrow">Data science</p>
     <h1>Grzegorz Hintz</h1>
-    <p class="tagline"><span lang="pl">Pytania ekonomisty, warsztat data scientista.</span><span lang="en">An economist's questions, a data scientist's toolkit.</span></p>
-    <p class="lead" lang="pl">Zawodowo pracuję nad systemem pricingowym w Energa Obrót. Po godzinach buduję aplikacje, które odpowiadają na konkretne pytania: czy usiądę w porannym SKM, kiedy kontrakt na energię dojdzie do mojej ceny, co obejrzeć wieczorem. Każda z nich działa i każdą można kliknąć.</p>
-    <p class="lead" lang="en">By day I work on a pricing system at Energa Obrót, a Polish energy supplier. After hours I build apps that answer concrete questions: will I get a seat on the morning train, when will a power contract hit my price, what should I watch tonight. Every one of them runs, and you can try each one.</p>
-    <p class="meta"><span lang="pl">Specjalista, Wydział Polityki Cenowej · Energa Obrót · SGH Data Engineering – Big Data · Gdańsk</span><span lang="en">Specialist, Pricing Policy Department · Energa Obrót · SGH Data Engineering – Big Data · Gdańsk, Poland</span></p>
+    <p class="tagline"><span lang="pl">Lubię szukać w danych związków, których na pierwszy rzut oka nie widać.</span><span lang="en">I like finding patterns in data that aren't obvious at first glance.</span></p>
+    <p class="lead" lang="pl">Interesuję się data science. Niżej kilka moich projektów i narzędzia, których używam.</p>
+    <p class="lead" lang="en">I'm into data science. Below are a few of my projects and the tools I use.</p>
+    <p class="meta"><span lang="pl">Gdańsk · Energa Obrót · SGH</span><span lang="en">Gdańsk, Poland · Energa Obrót · SGH</span></p>
     <div class="cta">
       <a class="btn primary" href="https://www.linkedin.com/in/grzegorz-hintz-272727272727astyu" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
@@ -169,45 +150,24 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:28px 0 40px}
       <a class="btn" href="mailto:grzegorz.hintz27@gmail.com">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>E-mail</a>
     </div>
-    <ul class="qchips">
-      <li><a href="#skm"><span lang="pl">Czy usiądę w SKM?</span><span lang="en">Will I get a seat?</span></a></li>
-      <li><a href="#tge"><span lang="pl">Kiedy cena dojdzie?</span><span lang="en">When will the price hit?</span></a></li>
-      <li><a href="#film"><span lang="pl">Co obejrzeć?</span><span lang="en">What to watch?</span></a></li>
-      <li><a href="#pcp"><span lang="pl">Gdzie taniej?</span><span lang="en">Where is it cheaper?</span></a></li>
-    </ul>
   </div>
 </header>
 
 <section id="projekty">
-  <h2><span lang="pl">Cztery pytania</span><span lang="en">Four questions</span></h2>
-  <p class="sub"><span lang="pl">Każdy projekt zaczął się od pytania, na które nie było gotowej odpowiedzi. Każdy działa na moim własnym serwerze.</span><span lang="en">Each project started with a question nobody had answered yet. Each one runs on my own home server.</span></p>
+  <h2><span lang="pl">Projekty</span><span lang="en">Projects</span></h2>
+  <p class="sub"><span lang="pl">Każdy zaczął się od pytania, na które sam chciałem znać odpowiedź. Trzy pierwsze można otworzyć i sprawdzić.</span><span lang="en">Each one started with a question I wanted answered. The first three are live, so you can try them.</span></p>
 
   <article class="proj" id="skm">
     <div class="proj-head">
       <h3>Znowu SKM</h3>
       <span class="tag"><span lang="pl">model popytu · działa</span><span lang="en">demand model · live</span></span>
     </div>
-    <p class="question"><span lang="pl">„Czy usiądę w SKM i do którego wagonu wsiąść?”</span><span lang="en">“Will I get a seat on the train, and which car should I board?”</span></p>
-    <p lang="pl">Codziennie jeżdżę SKM z Gdyni Chylonii na gdańskie Przymorze. Nikt nie publikuje, jak bardzo zapełnione są pociągi, więc policzyłem to sam. Zbudowałem od zera model popytu: kto, skąd, dokąd i o której jedzie. Skalibrowałem go na oficjalnych danych UTK za 2025 rok (50,36 mln pasażerów rocznie) i sprawdziłem z niezależnymi pomiarami z Gdańskich Badań Ruchu.</p>
-    <p lang="en">I commute daily on the Tricity rail line (SKM), from Gdynia Chylonia to Gdańsk Przymorze. Nobody publishes how full the trains are, so I worked it out myself. I built a demand model from scratch (who travels, from where, to where and when), calibrated it to official 2025 rail-office data (50.36 million passengers a year) and checked it against independent Gdańsk traffic counts.</p>
-    <div class="result">
-      <div class="win"><b>0,8–1,0</b><span lang="pl">stosunek model : pomiar na kluczowych odcinkach</span><span lang="en">model-to-measured ratio on key segments</span></div>
-    </div>
-    <ul lang="pl">
-      <li>Macierz podróży OD z modelu grawitacyjnego i IPF</li>
-      <li>Szansa na miejsce jako rozkład log-normalny, a nie proste „tak/nie”</li>
-      <li>Na żywo: opóźnienia z GTFS-RT, pogoda (Open-Meteo), kalendarz</li>
-      <li>Uczy się ze zgłoszeń pasażerów, instaluje się na telefonie (PWA)</li>
-    </ul>
-    <ul lang="en">
-      <li>Origin–destination matrix from a gravity model and IPF</li>
-      <li>Seat chance as a log-normal distribution, not a plain yes/no</li>
-      <li>Live inputs: GTFS-RT delays, weather (Open-Meteo), calendar effects</li>
-      <li>Learns from rider reports; installs on a phone as a PWA</li>
-    </ul>
-    <ul class="stack"><li>Python</li><li>NumPy</li><li>GTFS-RT</li><li>FastAPI</li><li>SQLite</li><li>PWA</li></ul>
-    <div class="links"><a href="https://znowuskm.tail37d1bd.ts.net" target="_blank" rel="noopener"><span lang="pl">Sprawdź, czy usiądziesz →</span><span lang="en">Check if you'll get a seat →</span></a></div>
-    <p class="note"><span lang="pl">Działa na moim domowym komputerze, więc czasem bywa offline.</span><span lang="en">Runs on my home PC, so it's occasionally offline.</span></p>
+    <p class="question"><span lang="pl">„Usiądę dziś w SKM-ce?”</span><span lang="en">“Will I get a seat on the train today?”</span></p>
+    <p lang="pl">Codziennie jeżdżę SKM-ką z Chylonii na Przymorze i rano zwykle stoję. Danych o tym, jak zapełnione są pociągi, nikt nie publikuje, więc zrobiłem własny model. Bazuje na danych UTK o liczbie pasażerów na stacjach, a wyniki porównałem z pomiarami z Gdańskich Badań Ruchu. Model daje 0,8–1,0 wartości z pomiarów, więc jest całkiem blisko.</p>
+    <p lang="en">I take the SKM train from Chylonia to Przymorze every day, and in the morning I usually end up standing. Nobody publishes how full the trains are, so I built my own model. It's based on UTK passenger counts per station, and I checked the output against Gdańsk traffic survey counts. It came out at 0.8–1.0 of the measured values, which is pretty close.</p>
+    <ul class="stack"><li>Python</li><li>NumPy</li><li>GTFS-RT</li><li>FastAPI</li><li>SQLite</li></ul>
+    <div class="links"><a href="https://znowuskm.tail37d1bd.ts.net" target="_blank" rel="noopener"><span lang="pl">Zobacz →</span><span lang="en">Take a look →</span></a></div>
+    <p class="note"><span lang="pl">Stoi na moim komputerze w domu, więc czasem jest offline.</span><span lang="en">It runs on my PC at home, so now and then it's offline.</span></p>
   </article>
 
   <article class="proj" id="tge">
@@ -215,25 +175,12 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:28px 0 40px}
       <h3>TGE Monitor</h3>
       <span class="tag"><span lang="pl">rynek energii · demo</span><span lang="en">energy market · demo</span></span>
     </div>
-    <p class="question"><span lang="pl">„Kiedy kontrakt na energię dojdzie do mojej ceny?”</span><span lang="en">“When will a power contract hit my price?”</span></p>
-    <p lang="pl">Po każdej sesji Towarowej Giełdy Energii aplikacja pobiera dzienne kursy rozliczeniowe (DKR) kontraktów terminowych na energię elektryczną, porównuje je z poziomami zleceń i wysyła e-mail, gdy cena „dojdzie”. Wie, kiedy giełda nie pracuje, i prowadzi archiwum notowań. To projekt prywatny, napędzany tą samą ciekawością cen, która zaprowadziła mnie do pricingu.</p>
-    <p lang="en">After every session on the Polish Power Exchange (TGE), the app collects daily settlement prices for electricity futures, compares them with order levels and sends an e-mail when a price is hit. It knows when the exchange is closed and keeps a full archive of quotes. It's a personal project, driven by the same curiosity about prices that led me into pricing.</p>
-    <div class="result">
-      <div class="win"><b><span lang="pl">po każdej sesji</span><span lang="en">after every session</span></b><span lang="pl">automatycznie, bez ręcznego sprawdzania</span><span lang="en">automatically, no manual checking</span></div>
-    </div>
-    <ul lang="pl">
-      <li>Scraping notowań, archiwum sesji z eksportem do CSV</li>
-      <li>Harmonogram uwzględniający dni sesyjne i święta</li>
-      <li>Alerty e-mail, aplikacja instalowana na telefonie</li>
-    </ul>
-    <ul lang="en">
-      <li>Quote scraping, session archive with CSV export</li>
-      <li>Scheduler aware of trading days and public holidays</li>
-      <li>E-mail alerts; installs on a phone</li>
-    </ul>
-    <ul class="stack"><li>Python</li><li>scraping</li><li>APScheduler</li><li>FastAPI</li><li>SQLite</li><li>Docker</li></ul>
+    <p class="question"><span lang="pl">„Kiedy cena energii dojdzie do mojego poziomu?”</span><span lang="en">“When will the power price reach my level?”</span></p>
+    <p lang="pl">Po każdej sesji na Towarowej Giełdzie Energii aplikacja pobiera ceny rozliczeniowe kontraktów na prąd i porównuje je z moimi poziomami. Jak cena dojdzie do któregoś, dostaję maila. Wie, kiedy giełda jest zamknięta, i zapisuje historię notowań.</p>
+    <p lang="en">After each session on the Polish Power Exchange (TGE), the app pulls settlement prices for power contracts and checks them against my levels. If one gets hit, I get an e-mail. It knows when the exchange is closed and keeps a history of quotes.</p>
+    <ul class="stack"><li>Python</li><li>scraping</li><li>APScheduler</li><li>FastAPI</li><li>Docker</li></ul>
     <div class="links"><a href="https://znowuskm.tail37d1bd.ts.net:10000/" target="_blank" rel="noopener"><span lang="pl">Otwórz demo →</span><span lang="en">Open the demo →</span></a></div>
-    <p class="note"><span lang="pl">Hasło: <b>demo</b>. Prawdziwe notowania TGE, przykładowe zlecenia, bez wysyłki maili.</span><span lang="en">Password: <b>demo</b>. Real TGE quotes, sample orders, e-mails switched off.</span></p>
+    <p class="note"><span lang="pl">Hasło: <b>demo</b>. Prawdziwe notowania, przykładowe zlecenia, maile wyłączone.</span><span lang="en">Password: <b>demo</b>. Real quotes, sample orders, e-mails off.</span></p>
   </article>
 
   <article class="proj" id="film">
@@ -241,119 +188,58 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:28px 0 40px}
       <h3>Film Recommender</h3>
       <span class="tag"><span lang="pl">projekt dyplomowy SGH · działa</span><span lang="en">SGH capstone · live</span></span>
     </div>
-    <p class="question"><span lang="pl">„Co obejrzeć, skoro podobał mi się ten film?”</span><span lang="en">“What should I watch next, given what I liked?”</span></p>
-    <p lang="pl">Hybrydowy system rekomendacji: filtrowanie kolaboracyjne (ALS w PySpark) połączone z podobieństwem treści. Proporcji 0,6 / 0,4 nie wziąłem z głowy. Dobrałem ją na danych MovieLens (547 widzów, 2512 filmów) z podziałem czasowym, czyli model przewiduje przyszłe seanse, a nie odgaduje przeszłe. Każda propozycja ma uzasadnienie: „Bo podobał Ci się X”.</p>
-    <p lang="en">A hybrid recommender: collaborative filtering (PySpark ALS) blended with content similarity. The 0.6 / 0.4 blend isn't a guess. I tuned it on MovieLens data (547 viewers, 2,512 films) with a time-based split, so the model predicts future viewing instead of re-guessing the past. Every suggestion explains itself: “Because you liked X”.</p>
+    <p class="question"><span lang="pl">„Co by tu dziś obejrzeć?”</span><span lang="en">“What should I watch tonight?”</span></p>
+    <p lang="pl">System rekomendacji filmów, który łączy oceny innych widzów (ALS w Sparku) z podobieństwem samych filmów. Sprawdziłem go na danych MovieLens: w 35% przypadków film, który ktoś później obejrzał, był w jego pierwszej dziesiątce propozycji. Dla porównania „najpopularniejsze” dają 26%, a losowanie 6%.</p>
+    <p lang="en">A movie recommender that mixes other viewers' ratings (ALS in Spark) with how similar the films themselves are. I tested it on MovieLens data: 35% of the time, a film someone watched later was in their top ten. For comparison, “most popular” gets 26% and random picks get 6%.</p>
     <div class="result">
-      <div class="win"><b>35%</b><span lang="pl">hybryda</span><span lang="en">hybrid</span></div>
+      <div class="win"><b>35%</b><span lang="pl">mój model</span><span lang="en">my model</span></div>
       <div><b>26%</b><span lang="pl">najpopularniejsze</span><span lang="en">most popular</span></div>
       <div><b>6%</b><span lang="pl">losowo</span><span lang="en">random</span></div>
-      <div class="cap"><span lang="pl">HitRate@10: u ilu widzów przynajmniej jeden film, który faktycznie obejrzeli później, był w pierwszej dziesiątce propozycji.</span><span lang="en">HitRate@10: share of viewers for whom at least one film they actually watched later was in their top-ten suggestions.</span></div>
     </div>
-    <ul lang="pl">
-      <li>Airflow: osobne DAG-i do pobierania danych, treningu i cotygodniowej ewaluacji</li>
-      <li>FastAPI, PostgreSQL, całość w Docker Compose</li>
-      <li>Pełny produkt: ok. 4200 stron pod SEO, konta z resetem hasła, kopie zapasowe, monitoring z alertami, RODO</li>
-    </ul>
-    <ul lang="en">
-      <li>Airflow: separate DAGs for data ingestion, training and weekly evaluation</li>
-      <li>FastAPI, PostgreSQL, everything in Docker Compose</li>
-      <li>A full product: ~4,200 SEO pages, accounts with password reset, backups, health checks with alerts, GDPR</li>
-    </ul>
-    <ul class="stack"><li>PySpark ALS</li><li>Airflow</li><li>FastAPI</li><li>PostgreSQL</li><li>Docker</li></ul>
-    <div class="links"><a href="https://film-recommender.pl" target="_blank" rel="noopener"><span lang="pl">Znajdź film →</span><span lang="en">Find a film →</span></a></div>
+    <ul class="stack"><li>PySpark</li><li>Airflow</li><li>FastAPI</li><li>PostgreSQL</li><li>Docker</li></ul>
+    <div class="links"><a href="https://film-recommender.pl" target="_blank" rel="noopener"><span lang="pl">Poszukaj filmu →</span><span lang="en">Find a film →</span></a></div>
   </article>
 
   <article class="proj small" id="pcp">
     <div class="proj-head">
-      <h3><span lang="pl">PCP – Porównywarka Cen Produktów</span><span lang="en">PCP – Product Price Comparator</span></h3>
-      <span class="tag"><span lang="pl">projekt zespołowy · studia</span><span lang="en">team project · university</span></span>
+      <h3><span lang="pl">PCP – porównywarka cen</span><span lang="en">PCP – price comparator</span></h3>
+      <span class="tag"><span lang="pl">projekt zespołowy</span><span lang="en">team project</span></span>
     </div>
-    <p class="question"><span lang="pl">„Gdzie jest taniej i czy ta cena naprawdę spadła?”</span><span lang="en">“Where is it cheaper, and did the price really drop?”</span></p>
-    <p lang="pl">Projekt trzyosobowego zespołu na studiach: scraping sklepów internetowych, historia cen, konta użytkowników i powiadomienia o zmianach.</p>
-    <p lang="en">A three-person university project: online store scraping, price history, user accounts and price-change alerts.</p>
+    <p class="question"><span lang="pl">„Gdzie jest taniej?”</span><span lang="en">“Where is it cheaper?”</span></p>
+    <p lang="pl">Projekt z dwoma kolegami ze studiów. Zbieraliśmy ceny ze sklepów internetowych i pokazywaliśmy, jak się zmieniały.</p>
+    <p lang="en">Built with two classmates at university. We collected prices from online stores and showed how they changed over time.</p>
     <div class="links"><a href="https://github.com/ASTYU27/pcp" target="_blank" rel="noopener">GitHub →</a></div>
   </article>
 </section>
 
-<section id="sciezka">
-  <h2><span lang="pl">Ścieżka</span><span lang="en">The path</span></h2>
-  <p class="sub"><span lang="pl">Ekonomia nauczyła mnie pytać o popyt i cenę. Ekonometria – jak to policzyć. Trzy lata w Sii – że za każdą liczbą stoją ludzie i terminy. SGH – jak robić to na dużą skalę.</span><span lang="en">Economics taught me to ask about demand and price. Econometrics taught me how to measure them. Three years at Sii taught me that every number has people and deadlines behind it. SGH taught me how to do it at scale.</span></p>
-  <ol class="timeline">
-    <li class="now">
-      <div class="when"><span lang="pl">2025 – dziś</span><span lang="en">2025 – now</span></div>
-      <div>
-        <h3>Energa Obrót</h3>
-        <p lang="pl">Specjalista w Wydziale Polityki Cenowej. Pracuję nad systemem pricingowym: ceny energii od strony spółki obrotu.</p>
-        <p lang="en">Specialist, Pricing Policy Department. I work on a pricing system: energy prices, seen from the supplier's side.</p>
-      </div>
-    </li>
-    <li>
-      <div class="when">2025 – 2026</div>
-      <div>
-        <h3><span lang="pl">SGH Szkoła Główna Handlowa</span><span lang="en">SGH Warsaw School of Economics</span></h3>
-        <p lang="pl">Studia podyplomowe Data Engineering – Big Data, ukończone. Projekt dyplomowy: Film Recommender.</p>
-        <p lang="en">Postgraduate studies in Data Engineering – Big Data, completed. Capstone project: Film Recommender.</p>
-      </div>
-    </li>
-    <li>
-      <div class="when">2021 – 2025</div>
-      <div>
-        <h3>Sii Poland</h3>
-        <p lang="pl">Najpierw staż w rekrutacji (Embedded Competency Center), potem trzy lata jako Sales and Delivery Operations Specialist. Kontakt z kandydatami i pracownikami, wsparcie procesów rekrutacji, praca z ludźmi na co dzień.</p>
-        <p lang="en">Started as a recruitment intern (Embedded Competency Center), then three years as a Sales and Delivery Operations Specialist: working with candidates and employees, supporting recruitment processes, dealing with people every day.</p>
-      </div>
-    </li>
-    <li>
-      <div class="when">2022 – 2024</div>
-      <div>
-        <h3><span lang="pl">Uniwersytet Gdański</span><span lang="en">University of Gdańsk</span></h3>
-        <p lang="pl">Magister, Informatyka i Ekonometria, równolegle z pracą w Sii.</p>
-        <p lang="en">MSc in Computer Science and Econometrics, alongside my job at Sii.</p>
-      </div>
-    </li>
-    <li>
-      <div class="when">2019 – 2022</div>
-      <div>
-        <h3><span lang="pl">Uniwersytet Gdański</span><span lang="en">University of Gdańsk</span></h3>
-        <p lang="pl">Licencjat z ekonomii. Po drodze Studencki Klub Biznesu (2020–2021) i AIESEC Polska (2021).</p>
-        <p lang="en">BA in Economics. Along the way: Student Business Club (2020–2021) and AIESEC Poland (2021).</p>
-      </div>
-    </li>
-  </ol>
-</section>
-
-<section id="jak-pracuje">
-  <h2><span lang="pl">Jak pracuję</span><span lang="en">How I work</span></h2>
-  <div class="how">
-    <p lang="pl">Pytanie, dane, model i ocena wyniku są po mojej stronie. Agent AI do kodowania odpowiada za tempo. Tak powstała większość projektów z tej strony i właśnie dlatego jedna osoba może po godzinach zbudować działający model popytu dla całej linii kolejowej. Agentów AI nie tylko używam, ale też uczę się je budować.</p>
-    <p lang="en">I own the question, the data, the model and the evaluation. An AI coding agent owns the speed. That's how most projects on this page were built, and it's why one person can put together a working demand model for an entire rail line in their spare time. I don't just use AI agents; I'm learning to build them.</p>
-  </div>
+<section id="technologie">
+  <h2><span lang="pl">Czym pracuję</span><span lang="en">What I use</span></h2>
   <div class="cols">
     <div class="box">
-      <h3><span lang="pl">Narzędzia</span><span lang="en">Toolkit</span></h3>
+      <h3><span lang="pl">Technologie</span><span lang="en">Tools</span></h3>
       <dl class="tools">
-        <dt><span lang="pl">Analiza</span><span lang="en">Analysis</span></dt><dd><span lang="pl">Python · SQL · R · Excel i Power Query · Power BI</span><span lang="en">Python · SQL · R · Excel &amp; Power Query · Power BI</span></dd>
-        <dt><span lang="pl">Dane</span><span lang="en">Data</span></dt><dd>PySpark · Airflow · FastAPI · PostgreSQL · SQLite</dd>
-        <dt><span lang="pl">Wdrożenia</span><span lang="en">Deployment</span></dt><dd><span lang="pl">Linux · Docker · Git/GitHub · domowy serwer z Cloudflare Tunnel i Tailscale</span><span lang="en">Linux · Docker · Git/GitHub · home server with Cloudflare Tunnel and Tailscale</span></dd>
-        <dt><span lang="pl">Zespół</span><span lang="en">Teamwork</span></dt><dd><span lang="pl">JIRA · Scrum · angielski</span><span lang="en">JIRA · Scrum · English</span></dd>
+        <dt><span lang="pl">Analiza</span><span lang="en">Analysis</span></dt><dd>Python · SQL · R · Excel · Power Query · Power BI</dd>
+        <dt><span lang="pl">Dane</span><span lang="en">Data</span></dt><dd>PySpark · Airflow · PostgreSQL · SQLite</dd>
+        <dt><span lang="pl">Aplikacje</span><span lang="en">Apps</span></dt><dd>FastAPI · Docker · Linux · Git</dd>
       </dl>
     </div>
     <div class="box">
-      <h3><span lang="pl">Certyfikaty</span><span lang="en">Certifications</span></h3>
+      <h3>AI</h3>
+      <p class="boxp" lang="pl">Ostatnio dużo siedzę w agentach AI. Używam ich przy własnych projektach i uczę się, jak je budować.</p>
+      <p class="boxp" lang="en">Lately I've been spending a lot of time with AI agents. I use them on my own projects and I'm learning how to build them.</p>
       <ul class="certs">
         <li>Microsoft Applied Skills: Enhance agents with autonomous capabilities<small>Microsoft · 2026</small></li>
         <li><span lang="pl">Umiejętności Jutra AI 3.0</span><span lang="en">“Skills of Tomorrow” AI 3.0</span><small>Google · 2026</small></li>
-        <li><span lang="pl">MS Excel: makra, Power Query, Power BI</span><span lang="en">MS Excel: macros, Power Query, Power BI</span><small>iNauka.pl · 2022</small></li>
+        <li><span lang="pl">Data Engineering – Big Data, studia podyplomowe</span><span lang="en">Data Engineering – Big Data, postgraduate studies</span><small>SGH · 2026</small></li>
       </ul>
     </div>
   </div>
 </section>
 
 <section class="contact">
-  <h2><span lang="pl">Kontakt</span><span lang="en">Get in touch</span></h2>
-  <p lang="pl">Jeśli któreś z tych pytań Cię zaciekawiło – albo masz lepsze – napisz.</p>
-  <p lang="en">If one of these questions caught your eye, or you've got a better one, drop me a line.</p>
+  <h2><span lang="pl">Kontakt</span><span lang="en">Contact</span></h2>
+  <p lang="pl">Najłatwiej złapać mnie mailowo albo na LinkedInie.</p>
+  <p lang="en">Easiest way to reach me is e-mail or LinkedIn.</p>
   <div class="cta">
     <a class="btn" href="mailto:grzegorz.hintz27@gmail.com">grzegorz.hintz27@gmail.com</a>
     <a class="btn" href="https://www.linkedin.com/in/grzegorz-hintz-272727272727astyu" target="_blank" rel="noopener">LinkedIn</a>
@@ -361,14 +247,14 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:28px 0 40px}
   </div>
 </section>
 
-<footer><span lang="pl">© 2026 Grzegorz Hintz · Gdańsk. Projekty z tej strony działają na moim własnym sprzęcie.</span><span lang="en">© 2026 Grzegorz Hintz · Gdańsk. The projects on this page run on my own hardware.</span></footer>
+<footer>© 2026 Grzegorz Hintz</footer>
 </div>
 
 <script>
 (function(){
   var root=document.documentElement, tb=document.getElementById('themeBtn'),
       segs=document.querySelectorAll('[data-set-lang]');
-  var titles={pl:'Grzegorz Hintz · popyt, ceny i dane',en:'Grzegorz Hintz · demand, prices and data'};
+  var titles={pl:'Grzegorz Hintz · data science',en:'Grzegorz Hintz · data science'};
   function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
   function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
   var q=new URLSearchParams(location.search).get('lang');
